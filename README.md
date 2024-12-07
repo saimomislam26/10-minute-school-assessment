@@ -1,5 +1,5 @@
 
-Live Linnk - [https://10-minute-school-assessment.vercel.app/](https://10-minute-school-assessment.vercel.app/)
+Live Link - [https://10-minute-school-assessment.vercel.app/](https://10-minute-school-assessment.vercel.app/)
 ## Requirements
 
 - **Node.js**: >= v16.0.0
