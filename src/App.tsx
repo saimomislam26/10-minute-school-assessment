@@ -25,6 +25,8 @@ import { setCourseDetails } from './redux/slices/detailsSlice';
 import { CoursePointers } from './components/course/CoursePointers';
 import { CourseModal } from './components/CourseModal';
 import Footer from './components/Footer';
+import CourseFaq from './components/course/CourseFaq';
+import Loading from './components/ui/Loader';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false)
@@ -49,7 +51,7 @@ function App() {
       setIsLoading(true)
       try {
         const res = await getCourseDetails();
-        dispatch(setCourseDetails(res.data.sections))
+        dispatch(setCourseDetails(res.data))
       } catch (error) {
         console.log(error);
         if (error instanceof AxiosError) {
@@ -67,7 +69,7 @@ function App() {
 
   if (isLoading) {
     return (
-      <div>Loading</div>
+      <Loading/>
     )
   }
   return (
@@ -79,7 +81,7 @@ function App() {
       </div>
       <div className='flex justify-center'>
         <div max-w-4xl w-full>
-          <div className="sticky md:top-[65px] z-20 mt-[60px] w-[60%] hidden bg-white md:block container" >
+          <div className="sticky md:top-[85px] z-20 mt-[60px] w-[60%] hidden bg-white md:block container" >
             <div className=" relative">
               <div className="border-b border-gray-200 mb-6">
                 <CourseNavigation />
@@ -95,7 +97,8 @@ function App() {
           <ClassRoutine />
           <FreeItems />
           {/* <CourseTestimonial/> */}
-          <CourseDetails />
+          <CourseDetails/>
+          <CourseFaq />
           <CourseModal />
         </div>
 

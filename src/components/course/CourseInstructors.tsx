@@ -63,7 +63,7 @@ const CourseInstructors = () => {
   }, [])
 
   return (
-    <div className="relative w-full ">
+    <div className="relative w-full" id="course-instructors">
       <div className="md:w-[50%] mx-10 md:mx-16 bg-cover  rounded-xl md:mb-12 sm:mt-10 mb-10 xs:bg-[#EEF2F4] xs:py-2 ">
         <div className="pt-4 pb-2 ">
           <h2 className="mb-4 text-xl font-semibold md:text-2xl ">

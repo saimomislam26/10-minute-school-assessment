@@ -17,7 +17,7 @@ const ClassRoutine = () => {
     const totalClasses = routineData.reduce((sum, item) => sum + item.classes, 0);
 
     return (
-        <div className="w-full">
+        <div className="w-full" id="class-routine">
             <div className="pt-4 md:mx-16 mx-10">
                 <h2 className="text-xl font-semibold md:text-2xl ">
                     Class routine

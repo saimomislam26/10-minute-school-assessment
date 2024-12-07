@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { CheckCircle2 } from 'lucide-react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/store/store';
 
 const courseFeatures = [
   '36 LIVE Classes (50 mins lecture+ 30 mins Q/A)',
@@ -12,15 +14,37 @@ const courseFeatures = [
   'Course Validity 12 Months'
 ];
 
+interface CheckList{
+  color: string,
+  icon: string,
+  id: string,
+  list_page_visibility: string,
+  text: string
+}
+
 export function CourseFeatures() {
+
+  const detailsState = useSelector((state: RootState) => state.details)
+
+  const [checkListValue, setCheckListValue] = useState<CheckList[] | null>(null)
+  console.log({checkListValue});
+  
+
+  useEffect(() => {
+    if (!checkListValue) {
+      setCheckListValue(detailsState.checkList)
+    }
+  }, [])
+
   return (
     <div className="space-y-4">
       <h3 className="font-medium text-lg">এই কোর্সে যা থাকছে</h3>
       <div className="space-y-3">
-        {courseFeatures.map((feature, index) => (
+        {checkListValue && checkListValue.map((feature, index) => (
           <div key={index} className="flex items-start gap-3">
-            <CheckCircle2 className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
-            <span className="text-sm text-gray-600">{feature}</span>
+            {/* <CheckCircle2 className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" /> */}
+            <img src={feature.icon} alt="icon" className='w-5 h-5'/>
+            <span className="text-sm text-gray-600">{feature.text}</span>
           </div>
         ))}
       </div>

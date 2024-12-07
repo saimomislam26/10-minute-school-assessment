@@ -7,14 +7,14 @@ const FreeItems = () => {
     const detailsState = useSelector((state: RootState) => state.details)
 
   const [checkListValue, setCheckListValue] = useState<CourseInfo | null>(null)
-  console.log({checkListValue});
+ 
   useEffect(() => {
     if (!checkListValue) {
       setCheckListValue(detailsState.section.courseInfo)
     }
   }, [])
     return (
-        <div className="w-full">
+        <div className="w-full" id='free-items'>
             <div className="pt-4 md:mx-16 mx-10">
                 <h2 className="text-xl font-semibold md:text-2xl ">
                     Free items with this products-

@@ -16,7 +16,7 @@ export function FreeWebinar() {
   }, [])
 
   return (
-    <div>
+    <div className="mt-20 md:mt-0">
       <div id="demo_class_book_engagement w-[100%]">
         <div className=" md:w-[50%] md:mx-16 mx-10 bg-cover flex gap-4 p-4 mb-8 overflow-hidden md:p-8 rounded-xl md:mb-12 sm:mt-10" style={{ backgroundImage: `url(${checkListValue && checkListValue.values[0].background.image})` }}>
           <div className="w-full md:w-1/2">

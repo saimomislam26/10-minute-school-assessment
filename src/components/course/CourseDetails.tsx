@@ -3,7 +3,7 @@ import { Accordion, AccordionSummary, AccordionDetails, Typography, List, ListIt
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 const CourseDetails = () => {
     return (
-        <div className="w-full">
+        <div className="w-full" id="course-details">
             <div className="pt-4 md:mx-16 mx-10">
                 <h2 className="text-xl font-semibold md:text-2xl">
                     Course Details

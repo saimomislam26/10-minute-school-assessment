@@ -37,7 +37,7 @@ export function CourseHeader() {
       <div className="container mx-auto px-4">
         <div className="flex items-start justify-between">
           <div className="w-[60%]">
-            <Badge variant="live">LIVE</Badge>
+            <img src={'https://cdn.10minuteschool.com/images/live_icon_1712036077434.png'} alt="live batch" className='w-20'/>
             <h1 className="text-white mb-2 text-[21px] font-semibold md:text-4xl">IELTS LIVE Batch</h1>
             <p className="text-gray-400 white-space: pre-wrap; overflow:hidden;height:auto;mask-image:none mt-4">
               Get the best IELTS preparation with direct guidance and feedback from the country's top IELTS

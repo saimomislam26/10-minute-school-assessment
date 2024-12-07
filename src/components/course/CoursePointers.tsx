@@ -15,7 +15,7 @@ export function CoursePointers() {
     }, [])
 
     return (
-        <div className="w-full">
+        <div className="w-full" id="course-learn">
         <div className="pt-4 md:mx-16 mx-10">
           <h2 className="text-xl font-semibold md:text-2xl ">
           What you will learn by doing the course

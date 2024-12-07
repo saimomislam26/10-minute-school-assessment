@@ -4,8 +4,8 @@ import { PriceTag } from './course/PriceTag';
 import { Button } from './ui/Button';
 
 export function CourseModal() {
-  const [modalTop, setModalTop] = useState(150); // Initial top value when page is scrolled
-  const [isScrolling, setIsScrolling] = useState(false);
+  const [modalTop, setModalTop] = useState(150); 
+
   useEffect(() => {
     const handleScroll = () => {
       const footer = document.getElementById('footer');
