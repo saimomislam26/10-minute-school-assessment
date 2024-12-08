@@ -27,8 +27,6 @@ export function CourseFeatures() {
   const detailsState = useSelector((state: RootState) => state.details)
 
   const [checkListValue, setCheckListValue] = useState<CheckList[] | null>(null)
-  console.log({checkListValue});
-  
 
   useEffect(() => {
     if (!checkListValue) {
