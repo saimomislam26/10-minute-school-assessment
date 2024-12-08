@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import  Navbar  from './components/Navbar';
+import Navbar from './components/Navbar';
 import { CourseHeader } from './components/CourseHeader';
 
 import CourseNavigation from './components/ui/CourseNavigation';
@@ -27,6 +27,9 @@ import { CourseModal } from './components/CourseModal';
 import Footer from './components/Footer';
 import CourseFaq from './components/course/CourseFaq';
 import Loading from './components/ui/Loader';
+import BottomModal from './components/ui/BottomModal';
+import { TestimonialSlider } from './components/ui/testimonials/TestimonialSlider';
+import { testimonials } from './data/testimonial';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false)
@@ -69,7 +72,7 @@ function App() {
 
   if (isLoading) {
     return (
-      <Loading/>
+      <Loading />
     )
   }
   return (
@@ -81,7 +84,7 @@ function App() {
       </div>
       <div className='flex justify-center'>
         <div max-w-4xl w-full>
-          <div className="sticky md:top-[85px] z-20 mt-[60px] w-[60%] hidden bg-white md:block container" >
+          <div className="sticky md:top-[65px] z-20 mt-[60px] w-[60%] hidden bg-white md:block container" >
             <div className=" relative">
               <div className="border-b border-gray-200 mb-6">
                 <CourseNavigation />
@@ -97,14 +100,16 @@ function App() {
           <ClassRoutine />
           <FreeItems />
           {/* <CourseTestimonial/> */}
-          <CourseDetails/>
+          <TestimonialSlider testimonials={testimonials} />
+          <CourseDetails />
           <CourseFaq />
           <CourseModal />
         </div>
 
       </div>
 
-      <Footer/>
+      <Footer />
+      <BottomModal />
 
       <ToastContainer
         position="top-right"

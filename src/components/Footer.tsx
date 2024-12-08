@@ -24,8 +24,8 @@ const Footer = () => {
         }
     ]
     return (
-        <footer id="footer" className="bg-white border-t border-gray-200 py-8 px-8">
-            <div className="container mx-auto px-4 lg:px-8">
+        <footer id="footer" className="bg-white border-t border-gray-200 py-8 px-8 ">
+            <div className="container mx-auto px-4 lg:px-8"style={{paddingBottom:"110px"}}>
                 {/* Footer Top */}
                 <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-8 lg:space-y-0 lg:space-x-8">
                     {/* Logo and App Links */}

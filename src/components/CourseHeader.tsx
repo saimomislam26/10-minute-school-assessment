@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Countdown } from './Countdown';
 import CourseStats from './course/CourseStats';
-import { Badge } from './ui/Badge';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store/store';
 import { MetaItem, TimerMetaValue } from '../utils/type';
